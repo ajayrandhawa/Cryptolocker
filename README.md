@@ -7,7 +7,7 @@
 Buggy Ransomware is open source  Crypto-Locker. Buggy Ransomware is developed in Visual C++. It has features encrypt all file, lock down the system and send keys back to the server. Multi-threaded functionality helps to this tool make encryption faster.
 
 
-## Step 1 (Fetch files & encrypt them)
+## Step 1 (Fetch files)
 
 Getting all files from all drive to encrypting them.
 
@@ -39,5 +39,8 @@ int main(int argc, char* argv[]) {
 	return 0;
 }
 ```
+
+## Step 2 (Encrypt files)
+
 
 # Currently in Development....Happy Hacking:)
