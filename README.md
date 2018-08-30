@@ -11,7 +11,7 @@ Buggy Ransomware is open source  Crypto-Locker. Buggy Ransomware is developed in
 1. Strong AES Encryption. (Unbreakable)
 2. LockDown System Functionailty.
 3. Multi-Thread Encryption.
-4. Undetectable.
+4. Undetectable (60+ World Most Popular AntiVirus Bypass).
 5. Powerful Web Admin Interface
 
 ## Step 1 (Fetch files)
