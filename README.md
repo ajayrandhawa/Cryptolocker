@@ -9,7 +9,7 @@ Blackcat Ransomware is open source Crypto-Locker. Blackcat Ransomware is develop
 ## Features
 
 1. Strong AES Encryption. (Unbreakable)
-2. LockDown System Functionailty.
+2. Lockdown System Functionailty.
 3. Multi-Thread Encryption.
 4. Undetectable (60+ World Most Popular AntiVirus Bypass).
 5. Powerful Web Admin Interface
