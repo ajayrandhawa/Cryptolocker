@@ -2,9 +2,9 @@
 
 <img src="logon.png" alt="logo">
 
-# Blackcat Ransomware
+# Blackcat Crypto
 
-Blackcat Ransomware is open source Crypto-Locker. Blackcat Ransomware is developed in Visual C++. It has features encrypt all file, lock down the system and send keys back to the server. Multi-threaded functionality helps to this tool make encryption faster.
+Blackcat Crypto is open source Crypto-Locker. Blackcat Crypto is developed in Visual C++. It has features encrypt all file, lock down the system and send keys back to the server. Multi-threaded functionality helps to this tool make encryption faster.
 
 ## Features
 
@@ -63,7 +63,7 @@ out_file.open("data.txt", ios::in);
 	}
 ```
 
-# Currently in Development....Happy Hacking:)
+# Currently in Development....Happy White Hacking:)
 
 ## Donate
 If you appreciate that, please consider donating to the Developer.
