@@ -63,10 +63,5 @@ out_file.open("data.txt", ios::in);
 	}
 ```
 
-# Currently in Development....Happy White Hacking:)
-
-## Donate
-If you appreciate that, please consider donating to the Developer.
-
-[![Donate](https://cdn.pbrd.co/images/HyQFKkP.png)](https://www.paypal.me/ajayrandhawa) 
+# Currently in Development....Happy Cyber Security:)
 
