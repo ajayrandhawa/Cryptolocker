@@ -25,22 +25,43 @@ Here is Visual C++ program get all list directory & files in drive and store pat
 #include <boost/filesystem.hpp>
 #include <iostream>
 #include <iterator>
+#include <stdio.h>
+#include <windows.h>
 
 using namespace std;
 
 fstream out_file("data.txt", ios::out);
 
-int main(int argc, char* argv[]) {
-	boost::system::error_code dir_error;
+#define MAX 256
 
-	for (boost::filesystem::recursive_directory_iterator end, dir("C:\\Ajay\\", dir_error); dir != end; dir.increment(dir_error)) {
-		if (dir_error.value()) {
-			cerr << "Error accessing file: " << dir_error.message() << endl;
+int main(int argc, char* argv[]) {
+
+	int dr_type = 99;
+	char dr_avail[MAX];
+	char *temp = dr_avail;
+
+	/* 1st we fill the buffer */
+	GetLogicalDriveStrings(MAX, dr_avail);
+	while (*temp != NULL) { // Split the buffer by null
+		dr_type = GetDriveType(temp);
+
+		char skip[10] = "C:\\";
+
+		if (dr_type == 3 && temp[0] != 'C') {
+
+			boost::system::error_code dir_error;
+
+			for (boost::filesystem::recursive_directory_iterator end, dir(temp, dir_error); dir != end; dir.increment(dir_error)) {
+				if (dir_error.value()) {
+					cerr << "Error accessing file: " << dir_error.message() << endl;
+				}
+				else {
+					cout << dir->path() << endl;
+					out_file << dir->path() << "\n";
+				}
+			}
 		}
-		else {
-			cout << dir->path() << endl;
-			out_file << dir->path() << "\n";
-		}
+		temp += lstrlen(temp) + 1;
 	}
 	out_file.close();
 	system("pause");
