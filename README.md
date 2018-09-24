@@ -11,8 +11,7 @@ Blackcat Crypto is open source Crypto-Locker. Blackcat Crypto is developed in Vi
 1. Strong AES Encryption. (Unbreakable)
 2. Lockdown System Functionailty.
 3. Multi-Thread Encryption.
-4. Undetectable (60+ World Most Popular AntiVirus Bypass).
-5. Powerful Web Admin Interface
+4. Powerful Web Admin Interface
 
 ## Step 1 (Fetch files)
 
