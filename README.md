@@ -6,6 +6,8 @@
 
 Blackcat Crypto is open source Crypto-Locker. Blackcat Crypto is developed in Visual C++. It has features encrypt all file, lock down the system and send keys back to the server. Multi-threaded functionality helps to this tool make encryption faster.
 
+Using a powerful 256-bit encryption algorithm, Once a file is encrypted, File is completely useless without the password. It simply cannot be read.
+
 ## Features
 
 1. Strong AES Encryption. (Unbreakable)
