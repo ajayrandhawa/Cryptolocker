@@ -87,6 +87,25 @@ out_file.open("data.txt", ios::in);
 	}
 ```
 
+## Step 3 (Create Long String Complex Password Function)
+
+Send length to function and function return complex long generated password which you can use for encryption.
+
+```
+string RandomString(int len)
+{
+	srand(time(0));
+	string str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	string newstr;
+	int pos;
+	while (newstr.size() != len) {
+		pos = ((rand() % (str.size() - 1)));
+		newstr += str.substr(pos, 1);
+	}
+	return newstr;
+}
+```
+
 # Currently in Development....
 # Happy Cyber Security.....Happy Open Source.......
 # :)
