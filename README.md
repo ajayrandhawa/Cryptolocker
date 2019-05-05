@@ -2,7 +2,7 @@
 
 <img src="logon.png" alt="logo">
 
-# Blackcat Crypto
+# Blackcat Cryptolocker
 
 Blackcat Crypto is open source Crypto-Locker. Blackcat Crypto is developed in Visual C++. It has features encrypt all file, lock down the system and send keys back to the server. Multi-threaded functionality helps to this tool make encryption faster.
 
