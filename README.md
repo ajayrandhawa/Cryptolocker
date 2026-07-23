@@ -15,6 +15,8 @@ Using a powerful 256-bit encryption algorithm, Once a file is encrypted, File is
 3. Multi-Thread Encryption.
 4. Powerful Web Admin Interface
 
+<img src="safe.png" >
+
 <img src="ezgif-1-e99b3d2b6b39.gif" >
 
 ## Step 1 (Fetch files)
